@@ -1,17 +1,21 @@
 import {Component} from 'angular2/core'
-import {CoursesComponent} from './courses.component'
-import {AuthorsComponent} from './authors.component'
-import {FavoriteComponent} from './favorite.component'
+//import {FavoriteComponent} from './favorite.component'
+import {LikeComponent} from './like.component'
 
 
 @Component({
   selector: 'app',
   template: `
-    <h1> First Angular 2 with typescript app </h1>
-    <favorite></favorite>
-    <courses></courses>
-    <authors></authors>`,
-  directives: [CoursesComponent, AuthorsComponent, FavoriteComponent]
+    <likes [like]="post.liked" [count]="post.count" ></likes>`,
+  directives: [LikeComponent]
 })
 
-export class AppComponent {}
+export class AppComponent {
+
+  post = {
+    liked: false,
+    count: 10
+  }
+
+
+}
