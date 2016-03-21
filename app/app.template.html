@@ -22,11 +22,20 @@
     <voter [totalPoints]="voter.count" [userVote]="voter.userVote" (vote)="onVote($event)"></voter>
   </div>
 </div>
-
+<!-- Tweets component -->
 <div class="panel panel-default">
   <div class="panel-heading">
     <h2 class="panel-title">  Tweets component </h2></div>
   <div class="panel-body">
     <tweets></tweets>
+  </div>
+</div>
+
+<!-- Zippy component -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">  Zippy component </h2></div>
+  <div class="panel-body" >
+    <zippy *ngFor="#zippy of zippyContent" [title]="zippy.title"> {{zippy.content}}</zippy>
   </div>
 </div>
