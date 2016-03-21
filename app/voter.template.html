@@ -1,12 +1,6 @@
 <div class="voter text-center">
-  <i class="glyphicon glyphicon-menu-up arrows"
-  (click)="doUpVote()"
-  [class.hightlight]="upVote"
-  >
+  <i class="glyphicon glyphicon-menu-up arrows" (click)="doUpVote()" [class.hightlight]="upVote">
   </i>
   <span> {{totalPoints + userVote}} </span>
-  <i class="glyphicon glyphicon-menu-down arrows"
-  (click)="doDownVote()"
-  [class.hightlight]="downVote"
-  ></i>
+  <i class="glyphicon glyphicon-menu-down arrows" (click)="doDownVote()" [class.hightlight]="downVote"></i>
 </div>

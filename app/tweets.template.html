@@ -1,0 +1,12 @@
+<div class="media" *ngFor="#tweet of tweets; #i = index">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="http://lorempixel.com/100/100/people?{{i}}" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"> {{tweet.profileName}} <small>@ {{tweet.username}}</small></h4>
+    <h4>{{tweet.tweet}}</h4>
+    <likes [like]="tweet.liked" [count]="tweet.likesCount"></likes>
+  </div>
+</div>
