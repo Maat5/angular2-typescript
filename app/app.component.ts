@@ -6,11 +6,12 @@ import {TweetsComponent} from './tweets.component'
 import {ZippyComponent} from './zippy.component'
 import {ZippyService} from './zippy.service'
 import {ContactFormCompoment} from './contact-form.component'
+import {SignUpFormComponent} from './signup-form.component'
 
 @Component({
   selector: 'app',
   templateUrl: 'app/app.template.html',
-  directives: [FavoriteComponent, LikeComponent, VoterComponent, TweetsComponent, ZippyComponent, ContactFormCompoment],
+  directives: [FavoriteComponent, LikeComponent, VoterComponent, TweetsComponent, ZippyComponent, ContactFormCompoment, SignUpFormComponent],
   providers: [ZippyService]
 })
 

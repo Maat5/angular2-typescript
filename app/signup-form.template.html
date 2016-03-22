@@ -1,0 +1,24 @@
+<form [ngFormModel]='form' (ngSubmit)="signUp()">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input id="username" type="text" class="form-control" ngControl="username" #username="ngForm">
+    <div *ngIf="username.control.pending">
+     <div class="alert alert-info">
+         checking username . . .
+     </div>
+    </div>
+    <div *ngIf="username.touched && username.errors">
+      <div *ngIf="username.errors.required" class="alert alert-danger"> Username is required</div>
+      <div *ngIf="username.errors.cannontContainSpace" class="alert alert-danger"> Cannont Contain Spaces</div>
+      <div *ngIf="username.errors.shoulbeUnique" class="alert alert-danger"> Username already taken </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input id="password" type="password" class="form-control" ngControl="password" #password="ngForm">
+  </div>
+  <div *ngIf="password.touched && password.errors">
+    <div *ngIf="password.errors.required" class="alert alert-danger"> Password is required.</div>
+  </div>
+  <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>
