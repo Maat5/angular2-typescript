@@ -18,6 +18,8 @@ import {SignUpFormComponent} from './signup-form.component'
 export class AppComponent {
   zippyContent = [];
 
+  activeView = "comps"
+
   post = {
     liked: false,
     count: 10
@@ -34,6 +36,10 @@ export class AppComponent {
 
   constructor(zippyService: ZippyService){
     this.zippyContent = zippyService.getContent();
+  }
+
+  changeView(view){
+    this.activeView = view;
   }
 
 }

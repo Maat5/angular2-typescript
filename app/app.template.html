@@ -1,59 +1,86 @@
-<!-- Favorite component -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title"> Favorite component</h2></div>
-  <div class="panel-body">
-    <favorite is-favorite="post.liked"></favorite>
-  </div>
-</div>
-<!-- Likes component -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title">  Likes component </h2></div>
-  <div class="panel-body">
-    <likes [like]="post.liked" [count]="post.count"></likes>
-  </div>
-</div>
-<!-- Voter component -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title">  Voter component </h2></div>
-  <div class="panel-body">
-    <voter [totalPoints]="voter.count" [userVote]="voter.userVote" (vote)="onVote($event)"></voter>
-  </div>
-</div>
-<!-- Tweets component -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title">  Tweets component </h2></div>
-  <div class="panel-body">
-    <tweets></tweets>
-  </div>
-</div>
+<ul class="nav nav-pills">
+  <li role="presentation" [ngClass]="{active: activeView==='comps'}" (click)="changeView('comps')"><a href="#">Components</a></li>
+  <li role="presentation" [ngClass]="{active: activeView==='forms'}"  (click)="changeView('forms')"><a href="#">Forms</a></li>
+  <!-- <li role="presentation"><a href="#">Messages</a></li> -->
+</ul>
 
-<!-- Zippy component -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title">  Zippy component </h2></div>
-  <div class="panel-body" >
-    <zippy *ngFor="#zippy of zippyContent" [title]="zippy.title"> {{zippy.content}}</zippy>
+<div class="m-t-md" *ngIf="activeView === 'comps'">
+  <div class="row">
+    <!-- Favorite component -->
+    <div class="col-xs-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"> Favorite component</h2></div>
+        <div class="panel-body">
+          <favorite is-favorite="post.liked"></favorite>
+        </div>
+      </div>
+    </div>
+    <!-- Likes component -->
+    <div class="col-xs-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">  Likes component </h2></div>
+        <div class="panel-body">
+          <likes [like]="post.liked" [count]="post.count"></likes>
+        </div>
+      </div>
+    </div>
+    <!-- Voter component -->
+    <div class="col-xs-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">  Voter component </h2></div>
+        <div class="panel-body">
+          <voter [totalPoints]="voter.count" [userVote]="voter.userVote" (vote)="onVote($event)"></voter>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Zippy component -->
+    <div class="col-xs-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">  Zippy component </h2></div>
+        <div class="panel-body">
+          <zippy *ngFor="#zippy of zippyContent" [title]="zippy.title"> {{zippy.content}}</zippy>
+        </div>
+      </div>
+    </div>
+    <!-- Tweets component -->
+    <div class="col-xs-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">  Tweets component </h2></div>
+        <div class="panel-body">
+          <tweets></tweets>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<!-- Zippy component -->
-<div class="Contact form panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title">  Contact form component </h2></div>
-  <div class="panel-body" >
-    <contact-form></contact-form>
-  </div>
-</div>
-
-<!-- Signup form component -->
-<div class="Contact form panel-default">
-  <div class="panel-heading">
-    <h2 class="panel-title">  Signup form </h2></div>
-  <div class="panel-body" >
-    <signup-form></signup-form>
+<div class="m-t-md" *ngIf="activeView === 'forms'">
+  <div class="row">
+    <div class="col-xs-6">
+      <!-- Contact component -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">  Contact form component </h2></div>
+        <div class="panel-body">
+          <contact-form></contact-form>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <!-- Signup form component -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">  Signup form </h2></div>
+        <div class="panel-body">
+          <signup-form></signup-form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
