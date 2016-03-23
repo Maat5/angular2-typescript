@@ -9,7 +9,7 @@ ___
 * [node.js] - evented I/O for the backend
 * [Npm] - npm is the package manager for  node.js
 * [Typescript] TypeScript is a language for application-scale JavaScript. TypeScript adds optional types, classes, and modules to JavaScript. 
- * [typings] The manager for TypeScript definitions.
+* [typings] The manager for TypeScript definitions.
 ### Installation
 
 Is recommend to install typescript and typings globally: 
