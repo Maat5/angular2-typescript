@@ -1,13 +1,12 @@
 <ul class="nav nav-pills">
   <li role="presentation" [ngClass]="{active: activeView==='comps'}" (click)="changeView('comps')"><a href="#">Components</a></li>
-  <li role="presentation" [ngClass]="{active: activeView==='forms'}"  (click)="changeView('forms')"><a href="#">Forms</a></li>
-  <!-- <li role="presentation"><a href="#">Messages</a></li> -->
+  <li role="presentation" [ngClass]="{active: activeView==='forms'}" (click)="changeView('forms')"><a href="#">Forms</a></li>
+  <li role="presentation"  [ngClass]="{active: activeView==='apis'}" (click)="changeView('apis')"><a href="#">Async Calls</a></li>
 </ul>
-
 <div class="m-t-md" *ngIf="activeView === 'comps'">
   <div class="row">
     <!-- Favorite component -->
-    <div class="col-xs-4">
+    <div class="col-xs-12 col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title"> Favorite component</h2></div>
@@ -17,7 +16,7 @@
       </div>
     </div>
     <!-- Likes component -->
-    <div class="col-xs-4">
+    <div class="col-xs-12 col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title">  Likes component </h2></div>
@@ -27,7 +26,7 @@
       </div>
     </div>
     <!-- Voter component -->
-    <div class="col-xs-4">
+    <div class="col-xs-12 col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title">  Voter component </h2></div>
@@ -39,7 +38,7 @@
   </div>
   <div class="row">
     <!-- Zippy component -->
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title">  Zippy component </h2></div>
@@ -49,7 +48,7 @@
       </div>
     </div>
     <!-- Tweets component -->
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title">  Tweets component </h2></div>
@@ -62,7 +61,7 @@
 </div>
 <div class="m-t-md" *ngIf="activeView === 'forms'">
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-md-6">
       <!-- Contact component -->
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -72,7 +71,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-md-6">
       <!-- Signup form component -->
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -82,5 +81,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>

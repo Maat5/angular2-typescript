@@ -1,11 +1,11 @@
 import {Component} from 'angular2/core'
-import {TweetsService} from './tweets.service'
-import {LikeComponent} from './like.component'
+import {TweetsService} from '../service/tweets.service'
+import {LikeComponent} from '../../likes/component/like.component'
 
 
 @Component({
   selector: 'tweets',
-  templateUrl: 'app/tweets.template.html',
+  templateUrl: 'app/components/tweets/template/tweets.template.html',
   inputs: [],
   providers: [TweetsService],
   directives: [LikeComponent]

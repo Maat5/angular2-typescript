@@ -2,7 +2,7 @@ import {Component, EventEmitter} from 'angular2/core'
 
 @Component({
   selector: 'voter',
-  templateUrl: 'app/voter.template.html',
+  templateUrl: 'app/components/voters/template/voter.template.html',
   styles: [`
 
     .voter{

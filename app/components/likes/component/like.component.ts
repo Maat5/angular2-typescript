@@ -2,7 +2,7 @@ import {Component} from 'angular2/core'
 
 @Component({
   selector: 'likes',
-  templateUrl: 'app/like.template.html',
+  templateUrl: 'app/components/likes/template/like.template.html',
   styles: [
      `
      .glyphicon {

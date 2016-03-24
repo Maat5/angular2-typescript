@@ -1,10 +1,10 @@
 import {Component} from 'angular2/core';
 import {ControlGroup, Control, Validators, FormBuilder} from 'angular2/common'
-import {UsernameValidators} from './usernameValidator'
+import {UsernameValidators} from '../../../validators/usernameValidator'
 
 @Component({
     selector: 'signup-form',
-    templateUrl: 'app/signup-form.template.html'
+    templateUrl: 'app/components/signup/template/signup-form.template.html'
 })
 
 export class SignUpFormComponent {

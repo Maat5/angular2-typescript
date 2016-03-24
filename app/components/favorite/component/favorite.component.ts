@@ -3,7 +3,7 @@ import {Component, EventEmitter} from 'angular2/core'
 
 @Component({
   selector: 'favorite',
-  templateUrl: 'app/favorite.template.html', //load as external file
+  templateUrl: 'app/components/favorite/template/favorite.template.html', //load as external file
   styles:[`
     .glyphicon-star {
       color: orange
